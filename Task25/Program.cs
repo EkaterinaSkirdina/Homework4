@@ -12,10 +12,26 @@ int A = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число В: ");
 int B = int.Parse(Console.ReadLine());
 
-Console.WriteLine(ExpNum(A, B));
+Console.WriteLine(ExpNumber(A, B));
 
-double ExpNum(int x, int y)
+/*double ExpNum(int x, int y)
 {
     double expon = Math.Pow(x, y);
     return expon;
+} */
+
+double ExpNumber(int x, int y)
+{
+    //int count = 1;
+    int find = x;
+    /*while (count < y)
+    {
+        find *= x;
+        count++;
+    }*/
+    for (int count = 1; count < y; count++)
+    {
+        find *= x;
+    }
+    return find;
 }
